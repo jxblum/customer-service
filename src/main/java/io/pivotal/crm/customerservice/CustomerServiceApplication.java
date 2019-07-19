@@ -2,19 +2,19 @@ package io.pivotal.crm.customerservice;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import org.apache.geode.cache.client.ClientRegionShortcut;
-
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.data.gemfire.config.annotation.EnableClusterConfiguration;
 import org.springframework.data.gemfire.config.annotation.EnableEntityDefinedRegions;
 
 import io.pivotal.crm.customerservice.model.Customer;
 import io.pivotal.crm.customerservice.repo.CustomerRepository;
 
 @SpringBootApplication
-@EnableEntityDefinedRegions(clientRegionShortcut = ClientRegionShortcut.LOCAL)
+@EnableEntityDefinedRegions
+@EnableClusterConfiguration(useHttp = true, requireHttps = false)
 public class CustomerServiceApplication {
 
 	public static void main(String[] args) {
