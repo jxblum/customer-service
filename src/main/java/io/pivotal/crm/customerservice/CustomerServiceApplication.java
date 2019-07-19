@@ -14,7 +14,7 @@ import io.pivotal.crm.customerservice.repo.CustomerRepository;
 
 @SpringBootApplication
 @EnableEntityDefinedRegions
-@EnableClusterConfiguration(useHttp = true, requireHttps = false)
+@EnableClusterConfiguration(useHttp = true)
 public class CustomerServiceApplication {
 
 	public static void main(String[] args) {
