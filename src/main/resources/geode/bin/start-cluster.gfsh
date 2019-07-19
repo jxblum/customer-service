@@ -1,0 +1,6 @@
+# !$GEODE_HOME/bin/gfsh
+# Gfsh shell script bootstrap an Apache Geode Cluster with Locator and Server(s)
+
+start locator --name=LocatorOne --log-level=config
+start server --name=ServerOne --log-level=config
+list members
