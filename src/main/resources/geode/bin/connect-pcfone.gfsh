@@ -1,0 +1,3 @@
+# $GEODE_HOME/bin/gfsh
+
+connect --use-http --url=https://cloudcache-fd422700-599b-4beb-bbbe-43d5540e80f6.run.pcfone.io/gemfire/v1 --user=cluster_operator_cI8xe8EeD3Bb1ffAxavQyw --password=RzIpqp2pnLy2aBT4t3V4g
